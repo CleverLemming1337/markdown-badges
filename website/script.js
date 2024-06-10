@@ -37,6 +37,8 @@ function main() {
             console.log(`added ${item.name}`)
             mdCode[index] = item.name
             document.getElementById("md-code").innerText = Object.values(mdCode).join("")
+            document.getElementById(index).remove()
+            document.getElementById("added").appendChild(badge)
         })
 
         document.getElementById(`badges_${categories[item.category].shortName}`).appendChild(badge);
